@@ -1,16 +1,1 @@
-
-(function() {
-    function async_load() {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css';
-        var x = document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
-    }
-    if (window.attachEvent) {
-        window.attachEvent('onload', async_load);
-    } else {
-        window.addEventListener('load', async_load, false);
-    }
-})();
+(function() {var css = document.createElement(&#39;link&#39;);css.href = &#39;//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css&#39;;css.rel = &#39;stylesheet&#39;;css.type = &#39;text/css&#39;;document.getElementsByTagName(&#39;head&#39;)[0].appendChild(css);})();
