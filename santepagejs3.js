@@ -1,4 +1,4 @@
-(function() {
+function() {
     var css = document.createElement( & #39;link&# 39;);
     css.href = & #39;//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css&# 39;;
     css.rel = & #39;stylesheet&# 39;;
