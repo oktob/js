@@ -220,18 +220,4 @@ function addScript(src, async, callback) {
     js.src = src;
     document.body.appendChild(js);
 }
-
-// Called when document is ready
-$(document).ready(function() {
-
-    // Wait for one second to ensure the user started browsing
-    setTimeout(function() {
-        (adsbygoogle = window.adsbygoogle || []);
-        $("ins.adsbygoogle").each(function() {
-            $("<script>(adsbygoogle = window.adsbygoogle || []).push({})</script>").insertAfter($(this));
-        });
-        addScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", true);
-    }, 1000);
-
-});
 /*]]>*/
