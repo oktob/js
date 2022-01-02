@@ -1,4 +1,4 @@
-(function(_0x376a69, _0x90e058) {
+<?  (function(_0x376a69, _0x90e058) {
     var _0x198484 = _0x43e4,
         _0x462ee2 = _0x23f1,
         _0x4cc115 = _0x376a69();
@@ -207,3 +207,4 @@ function shreet() {
     screenSize: true,
     language: true
 });
+ ?>
