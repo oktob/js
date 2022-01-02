@@ -209,20 +209,29 @@ function shreet() {
 });
 
 
-function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/oktob/js@master/adsensegurd.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
-
-(function () {
-   document.addEventListener("DOMContentLoaded", function () {
-       var e = "dmca-badge";
-       var t = "refurl";
-       var n = document.querySelectorAll('a.'+e);
-       if (n[0].getAttribute("href").indexOf("refurl") < 0) {
-           for (var r = 0; r < n.length; r++) {
-               var i = n[r];
-               i.href = i.href + (i.href.indexOf("?") === -1 ? "?" : "&") + t + "=" + document.location
-           }
-       }
-   }, false)
+// Create a script reference
+function addScript(src, async, callback) {
+    var js = document.createElement("script");
+    js.type = "text/javascript";
+    if (async)
+        js.async = true;
+    if (callback)
+        js.onload = callback;
+    js.src = src;
+    document.body.appendChild(js);
 }
-)()
+
+// Called when document is ready
+$(document).ready(function() {
+
+    // Wait for one second to ensure the user started browsing
+    setTimeout(function() {
+        (adsbygoogle = window.adsbygoogle || []);
+        $("ins.adsbygoogle").each(function() {
+            $("<script>(adsbygoogle = window.adsbygoogle || []).push({})</script>").insertAfter($(this));
+        });
+        addScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", true);
+    }, 1000);
+
+});
 /*]]>*/
