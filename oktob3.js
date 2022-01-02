@@ -208,16 +208,4 @@ function shreet() {
     language: true
 });
 
-
-// Create a script reference
-function addScript(src, async, callback) {
-    var js = document.createElement("script");
-    js.type = "text/javascript";
-    if (async)
-        js.async = true;
-    if (callback)
-        js.onload = callback;
-    js.src = src;
-    document.body.appendChild(js);
-}
 /*]]>*/
